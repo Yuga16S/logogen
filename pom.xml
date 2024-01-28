@@ -11,11 +11,11 @@
 	<groupId>com.bdec</groupId>
 	<artifactId>logogen</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
 	<name>logogen</name>
 	<description>An API that fetches the logo of various organizations.</description>
 	<properties>
 		<java.version>8</java.version> <!-- Set Java version to 1.8 -->
+		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
 	</properties>
 	<dependencies>
 		<dependency>
