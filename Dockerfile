@@ -1,7 +1,7 @@
 FROM openjdk:8-jre-slim
 
 WORKDIR /app
-COPY ./customTarget/logogen-0.0.1-SNAPSHOT.jar /app
+COPY ./target/logogen-0.0.1-SNAPSHOT.jar /app
 
 ADD /src/main/resources/application-docker.properties /app/application.properties
 
