@@ -14,6 +14,8 @@ public class Logo {
 	private String companyName;
 	private String domain;
 	private String url;
+	private boolean approved;
+	
 	
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -47,5 +49,13 @@ public class Logo {
 
 	public void setUrl(String url) {
 		this.url = url;
+	}
+	
+	public boolean isApproved() {
+		return approved;
+	}
+
+	public void setApproved(boolean approved) {
+		this.approved = approved;
 	}
 }
