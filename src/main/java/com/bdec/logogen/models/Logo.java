@@ -16,8 +16,15 @@ public class Logo {
 	private String url;
 	private boolean approved;
 	
+	public Logo() {}
 	
-    @Id
+    public Logo(String domain, String url, String companyName) {
+    	this.domain = domain;
+        this.url = url;
+        this.companyName = companyName;
+	}
+
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer getId() {
         return id;

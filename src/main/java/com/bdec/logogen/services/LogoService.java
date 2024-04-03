@@ -28,6 +28,7 @@ public class LogoService {
 		return logoRepository.save(logo);
 	}
 
+	@SuppressWarnings("unchecked")
 	public List<Logo> getAllLogos(int page, int limit) {
 		Pageable pageable = PageRequest.of(page - 1, limit, Sort.by("columnName").ascending()); 
 		return (List<Logo>) logoRepository.findAll(pageable);
