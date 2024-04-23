@@ -26,12 +26,6 @@ public class LogoController {
 	@GetMapping(value="/api/logoUrl/{domain}")
 	public String getLogoUrl(@PathVariable String domain) {
 	    Logo logo = logoService.getByDomain(domain);
-	    try {
-			Thread.sleep(10_000L);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	    if (logo == null) {
 	    	Map<String, String> logoAndCompanyName = logoService.fetchLogoAndCompanyName(domain); // Logo not found in the database, fetch it from the domain's website
 	    	if (logoAndCompanyName != null && logoAndCompanyName.containsKey("logoUrl")) {
